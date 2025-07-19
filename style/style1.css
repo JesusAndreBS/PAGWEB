@@ -1,21 +1,37 @@
+/* Tipografía y colores principales */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --color-principal: #a67c52;
+    --color-secundario: #d4a373;
+    --color-fondo: #f8f6f1;
+    --color-tarjeta: #fff;
+    --color-texto: #3d2c1a;
+    --color-footer: #a67c52;
+    --color-hover: #d4a373;
+    --color-boton: #d4a373;
+    --color-boton-hover: #a67c52;
+}
 
 body {
     font-family: 'Montserrat', Arial, sans-serif;
-    background: linear-gradient(135deg, #f8f6f1 0%, #e7d7b9 100%);
+    background: linear-gradient(135deg, var(--color-fondo) 0%, #e7d7b9 100%);
     margin: 0;
     padding: 0;
-    color: #3d2c1a;
+    color: var(--color-texto);
 }
 
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 5% 20px 5%;
-    background: rgba(255, 255, 255, 0.85);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-    border-bottom: 2px solid #d6c6a1;
+    padding: 24px 6% 24px 6%;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 12px rgba(166,124,82,0.07);
+    border-bottom: 2px solid var(--color-secundario);
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 #jss {
@@ -29,25 +45,28 @@ nav {
 }
 
 #h1 {
-    color: #a67c52;
-    font-size: 2.5rem;
+    color: var(--color-principal);
+    font-size: 2.7rem;
     font-weight: 700;
     margin: 0 0 5px 0;
     letter-spacing: 2px;
+    text-shadow: 1px 1px 0 #e7d7b9;
 }
 
 h2 {
-    color: #d4a373;
-    font-size: 1.5rem;
+    color: var(--color-secundario);
+    font-size: 1.6rem;
     margin: 0 0 5px 0;
     font-weight: 600;
+    letter-spacing: 1px;
 }
 
 h4 {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #7c5e3c;
     font-style: italic;
     margin: 0 0 10px 0;
+    opacity: 0.8;
 }
 
 ul {
@@ -55,100 +74,126 @@ ul {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 18px;
+    gap: 22px;
 }
 ul li {
     font-weight: 600;
     transition: transform 0.2s;
 }
 ul li:hover {
-    transform: scale(1.08);
+    transform: scale(1.10);
 }
 
 a {
-    color: #a67c52;
+    color: var(--color-principal);
     text-decoration: none;
-    padding: 6px 14px;
-    border-radius: 6px;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-size: 1.05rem;
     transition: background 0.2s, color 0.2s;
+    font-weight: 500;
 }
 a:hover {
-    background: #d4a373;
+    background: var(--color-hover);
     color: #fff;
 }
 
 #img1 {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     object-fit: cover;
     border-radius: 50%;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
     margin-top: 10px;
+    border: 2px solid var(--color-secundario);
 }
 
-/* Tarjetas de productos */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 16px;
+}
+
 .productos {
     display: flex;
     flex-wrap: wrap;
-    gap: 32px;
+    gap: 40px;
     justify-content: center;
     margin: 40px 0;
 }
 .producto {
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 4px 16px rgba(212,163,115,0.10);
-    padding: 24px 18px;
-    width: 220px;
+    background: var(--color-tarjeta);
+    border-radius: 18px;
+    box-shadow: 0 4px 18px rgba(212,163,115,0.13);
+    padding: 28px 20px;
+    width: 240px;
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: box-shadow 0.2s, transform 0.2s;
+    position: relative;
+    overflow: hidden;
 }
 .producto:hover {
-    box-shadow: 0 8px 32px rgba(212,163,115,0.18);
-    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(212,163,115,0.22);
+    transform: translateY(-6px) scale(1.04);
 }
 .producto img {
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
     object-fit: cover;
-    border-radius: 12px;
-    margin-bottom: 12px;
+    border-radius: 14px;
+    margin-bottom: 14px;
+    border: 1.5px solid var(--color-secundario);
+    background: #f8f6f1;
 }
 .producto h3 {
-    font-size: 1.1rem;
-    color: #a67c52;
+    font-size: 1.15rem;
+    color: var(--color-principal);
     margin: 0 0 8px 0;
     font-weight: 700;
+    text-align: center;
 }
 .producto p {
-    font-size: 1rem;
-    color: #3d2c1a;
+    font-size: 1.05rem;
+    color: var(--color-texto);
     margin: 0 0 12px 0;
+    text-align: center;
 }
 .producto button {
-    background: #d4a373;
+    background: var(--color-boton);
     color: #fff;
     border: none;
-    border-radius: 8px;
-    padding: 8px 18px;
-    font-size: 1rem;
+    border-radius: 10px;
+    padding: 10px 22px;
+    font-size: 1.05rem;
     font-weight: 600;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(212,163,115,0.10);
 }
 .producto button:hover {
-    background: #a67c52;
+    background: var(--color-boton-hover);
+    box-shadow: 0 4px 16px rgba(166,124,82,0.18);
 }
 
 footer {
-    background: #a67c52;
+    background: var(--color-footer);
     color: #fff;
     text-align: center;
-    padding: 18px 0;
-    font-size: 1rem;
+    padding: 22px 0;
+    font-size: 1.08rem;
     margin-top: 40px;
+    letter-spacing: 1px;
+    box-shadow: 0 -2px 8px rgba(166,124,82,0.07);
+}
+
+section > h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--color-principal);
+    margin-bottom: 32px;
+    font-weight: 700;
     letter-spacing: 1px;
 }
 
@@ -173,6 +218,13 @@ footer {
     #jss {
         width: 100%;
         min-width: 0;
+    }
+    main {
+        padding: 18px 4px;
+    }
+    section > h2 {
+        font-size: 1.3rem;
+        margin-bottom: 18px;
     }
 }
 
