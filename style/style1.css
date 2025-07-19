@@ -1,242 +1,180 @@
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+BE+WAL:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-#jss{
-    
-    height:70px;
-    width: 320px; 
- 
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: linear-gradient(135deg, #f8f6f1 0%, #e7d7b9 100%);
+    margin: 0;
+    padding: 0;
+    color: #3d2c1a;
 }
-nav{
+
+nav {
     display: flex;
-    
     align-items: center;
     justify-content: space-between;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 5%;
-    padding-right: -12%;
-    font-weight: bold;
-    border: 3px solid #00000076;
-   
-
+    padding: 20px 5% 20px 5%;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    border-bottom: 2px solid #d6c6a1;
 }
-#h1{
-    color: rgba(132, 89, 33, 0.661);
-    font-size: 3.5vw;
+
+#jss {
     display: flex;
-    position: relative;
-    bottom: 60px;
-
-    
-}
-h2{
-    color: rgb(132, 89, 33);
-    font-size: 41px;
-    
-    
-    position: relative;
-bottom: 117px;
-left: 96px;
-
-
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 350px;
+    min-height: 100px;
+    padding: 10px 0;
 }
 
-ul li{
-    display: inline-block;
-    padding: 10px;
-    font-weight: bold;
-    flex-wrap: wrap; /* Para que los elementos se ajusten automáticamente */
-    justify-content: space-between; /* Distribución espaciada entre los elementos */
-     margin-left: 0px;
-     margin-right:33.2px ;
-     margin-bottom: 4px;
-     margin-top: 4px;
-    
-    
-             
-    
-   
-      }
-
-a{
-    color: rgba(76, 66, 54, 0.813);
-    text-decoration: none;
-    display: flex;
+#h1 {
+    color: #a67c52;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+    letter-spacing: 2px;
 }
 
-a:hover{
-color: rgb(35, 98, 98);
+h2 {
+    color: #d4a373;
+    font-size: 1.5rem;
+    margin: 0 0 5px 0;
+    font-weight: 600;
 }
-h4{
-   
-    position: relative;
-    
-    white-space: nowrap;
-    
-    font-size: 10px;
-    bottom: 162px;
-    font-family: "Playwrite BE WAL", cursive;
+
+h4 {
+    font-size: 1rem;
+    color: #7c5e3c;
     font-style: italic;
-   
-
-
+    margin: 0 0 10px 0;
 }
- 
-body{
 
-    background: linear-gradient(to right, rgb(251, 238, 212), rgb(163, 147, 96), rgba(213, 181, 87, 0.929));
-    
-}
-#img1{
-
-    position:relative;
-    bottom: 252px;
-    left: 210px;
-    width: 4rem;
-    max-width: 100%; height: auto;
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    
-   
-  
+    gap: 18px;
+}
+ul li {
+    font-weight: 600;
+    transition: transform 0.2s;
+}
+ul li:hover {
+    transform: scale(1.08);
 }
 
-@media screen and (max-width:1000px){
-    
-    ul li{
-        display: inline-block;
-        padding: 3px;
-        font-weight: bold;
-        flex-wrap: wrap; /* Para que los elementos se ajusten automáticamente */
-        justify-content: space-between; /* Distribución espaciada entre los elementos */
-         margin-left: 1px;
-         margin-right:300px ;
-         margin-bottom: 46px;
-         margin-top: 46px;
-        
-        
-                 
-        
-       
-          }
-          #h1{
-           
-        font-size: 36px;
-        bottom: 39px;
-            
-        }
-        h2{
-           
-            font-size: 37px;
-            bottom:  86px;
-            left: 68px;
-        
-        }
-        h4{
-            right: 5px;
-            bottom:122px;
-            
+a {
+    color: #a67c52;
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+a:hover {
+    background: #d4a373;
+    color: #fff;
+}
 
-        }
+#img1 {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-top: 10px;
+}
 
-        #img1{
-            bottom: 213px;
-            right: 0px;
-            left: 172px;
-         }
+/* Tarjetas de productos */
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    margin: 40px 0;
+}
+.producto {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(212,163,115,0.10);
+    padding: 24px 18px;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.producto:hover {
+    box-shadow: 0 8px 32px rgba(212,163,115,0.18);
+    transform: translateY(-4px) scale(1.03);
+}
+.producto img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+.producto h3 {
+    font-size: 1.1rem;
+    color: #a67c52;
+    margin: 0 0 8px 0;
+    font-weight: 700;
+}
+.producto p {
+    font-size: 1rem;
+    color: #3d2c1a;
+    margin: 0 0 12px 0;
+}
+.producto button {
+    background: #d4a373;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.producto button:hover {
+    background: #a67c52;
+}
+
+footer {
+    background: #a67c52;
+    color: #fff;
+    text-align: center;
+    padding: 18px 0;
+    font-size: 1rem;
+    margin-top: 40px;
+    letter-spacing: 1px;
+}
+
+@media screen and (max-width: 900px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px 3% 16px 3%;
+    }
+    ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+    .productos {
+        gap: 18px;
+    }
+    .producto {
+        width: 90vw;
+        max-width: 320px;
+    }
+    #jss {
+        width: 100%;
+        min-width: 0;
+    }
 }
 
 
-
-
-@media screen and (max-width:950px){
-    
-   
-    
-#jss{
-    background-color: rgba(251, 210, 97, 0.071);
-    border-radius: 9px;
-    height:100px;
-    width: 350px; 
-    margin-right: 10px; /* Ajusta el valor según tus necesidades */
-     
-  
-}
-    ul li{
-        display: list-item;
-        padding: 10px;
-        font-weight: bold;
-        flex-wrap: wrap; /* Para que los elementos se ajusten automáticamente */
-        justify-content: space-between; /* Distribución espaciada entre los elementos */
-        margin-left: 5px; 
-        margin-right: 20px;
-        
-
-    
-        
-                 
-        
-       
-          }
-    
-    a{
-        color: rgba(242, 230, 219, 0.731);
-        text-decoration: none;
-        display: flex;
-        
-    }
-    
-    a:hover{
-    color: rgb(35, 98, 98);
-    }
-
-    
-
-
-        #h1{
-            color: rgba(132, 89, 33, 0.661);
-            font-size: 40px;
-            display: flex;
-            position: relative;
-            left: 20px;
-            top: -40px;
-        }
-        h2{
-            color: rgb(132, 89, 33);
-            font-size: 41px;
-            position: relative;
-        bottom: 95px;
-        left: 97px;
-        }
-        h4{
-            position: relative;
-            bottom: 139px;
-            left: 19px;
-            white-space: nowrap;
-        
-            font-size: 10px;
-            
-            font-family: "Playwrite BE WAL", cursive;
-            font-style: italic;
-            display: flex;
-        
-        }
-
-        #img1{
-
-           
-            bottom: 240px;
-            left:  209px;
-            width: 25%;
-            
-            max-height: 20rem;
-            margin-right: 10px; /* Ajusta el valor según tus necesidades */
-            box-sizing: border-box; /* Evita que el margen afecte el tamaño total del elemento */
-            
-          
-        }
-
-
-    }
-
-   
 
