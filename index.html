@@ -1,28 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda de Ropa</title>
     <link rel="icon" type="image/png" href="imagenes/Logo.png">
     <link rel="stylesheet" href="style/style1.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script>
-setTimeout(function() {
-    location.reload();
-}, 5000);
-</script>
-
+    <script>
+    setTimeout(function() {
+        location.reload();
+    }, 5000);
+    </script>
 </head>
 <body>
     <header>
         <nav>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-           <div id="jss">
-            <h1 id="h1">Tienda de Ropa</h1>
-            <h2>Moda y Estilo</h2>
-            <h4>Las mejores prendas para ti</h4>
-            <img id="img1" src="imagenes/Logo.png" alt="Logo Tienda">
+            <div id="jss">
+                <h1 id="h1">Tienda de Ropa</h1>
+                <h2>Moda y Estilo</h2>
+                <h4>Las mejores prendas para ti</h4>
+                <img id="img1" src="imagenes/Logo.png" alt="Logo Tienda">
             </div>
             <ul>
                 <li><a href="#">Inicio</a></li>
@@ -32,30 +29,51 @@ setTimeout(function() {
                 <li><a href="#">Contacto</a></li>
                 <li><a href="#">Carrito</a></li>
             </ul>
-            
         </nav>
-
-        
-
     </header>
     <main>
         <section>
             <h2>Nuestros Productos</h2>
             <div class="productos">
                 <div class="producto">
-                    <img src="imagenes/camiseta.jpeg" alt="Producto 1">
+                    <img src="imagenes/camiseta.jpeg" alt="Camiseta Básica">
                     <h3>Camiseta Básica</h3>
-                    <p>Precio: $15.00</p>
+                    <p>Precio: <span style="color:#d4a373;font-weight:bold;">$15.00</span></p>
                     <button>Comprar</button>
                 </div>
                 <div class="producto">
-                    <img src="imagenes/jeans.webp" alt="Producto 2">
+                    <img src="imagenes/jeans.webp" alt="Jeans Clásicos">
                     <h3>Jeans Clásicos</h3>
-                    <p>Precio: $30.00</p>
+                    <p>Precio: <span style="color:#d4a373;font-weight:bold;">$30.00</span></p>
                     <button>Comprar</button>
                 </div>
-                <!-- Agrega más productos aquí -->
+                <div class="producto">
+                    <img src="imagenes/Sipas.png" alt="Vestido Verano">
+                    <h3>Vestido Verano</h3>
+                    <p>Precio: <span style="color:#d4a373;font-weight:bold;">$25.00</span></p>
+                    <button>Comprar</button>
+                </div>
+                <div class="producto">
+                    <img src="imagenes/principal.jpg" alt="Chaqueta Casual">
+                    <h3>Chaqueta Casual</h3>
+                    <p>Precio: <span style="color:#d4a373;font-weight:bold;">$40.00</span></p>
+                    <button>Comprar</button>
+                </div>
             </div>
+        </section>
+        <section style="margin-top:40px;">
+            <h2 style="color:#a67c52;">¿Por qué elegirnos?</h2>
+            <ul style="max-width:700px;margin:0 auto 32px auto;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:32px;justify-content:center;">
+                <li style="background:#fff;border-radius:12px;box-shadow:0 2px 8px #d4a37333;padding:18px 24px;min-width:220px;text-align:center;">
+                    <strong>Envíos rápidos</strong><br>Recibe tus prendas en tiempo récord.
+                </li>
+                <li style="background:#fff;border-radius:12px;box-shadow:0 2px 8px #d4a37333;padding:18px 24px;min-width:220px;text-align:center;">
+                    <strong>Calidad garantizada</strong><br>Materiales premium y confección profesional.
+                </li>
+                <li style="background:#fff;border-radius:12px;box-shadow:0 2px 8px #d4a37333;padding:18px 24px;min-width:220px;text-align:center;">
+                    <strong>Atención personalizada</strong><br>Te ayudamos a elegir lo mejor para ti.
+                </li>
+            </ul>
         </section>
     </main>
     <footer>
